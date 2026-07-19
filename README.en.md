@@ -2,7 +2,7 @@
 
 [日本語](./README.md) | [English](./README.en.md)
 
-> A beginner-friendly guide to building software safely with Codex
+> **Learn safe, practical AI agent development with Codex and AGENTS.md—in 10 minutes.**
 
 This small, practical guide is not about handing everything over to AI. It is about learning how to build software with AI safely and confidently.
 
