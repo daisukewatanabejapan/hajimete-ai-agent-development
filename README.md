@@ -81,6 +81,14 @@ AIへの依頼には、次の4項目があると伝わりやすくなります�
 
 この3章では、特定のモデルやフレームワークに依存しない基本を扱います。APIキーは必要ありません。
 
+### 実践ガイド
+
+4. [AIエージェント開発の設計パターン集](./docs/04-design-patterns.md)
+5. [実際の失敗例と改善例（Before / After）](./docs/05-failures-before-after.md)
+6. [プロジェクト規模ごとのAGENTS.mdテンプレート](./docs/06-agents-by-project-size.md)
+7. [チーム開発での運用例](./docs/07-team-workflow.md)
+8. [AIへの依頼文（プロンプト）のカタログ](./docs/08-prompt-catalog.md)
+
 ## `AGENTS.md` とは
 
 `AGENTS.md` は、AIエージェントにプロジェクトの決まりを伝えるファイルです。プロジェクトの説明、よく使うコマンド、テスト方法、変更時の注意などを書きます。

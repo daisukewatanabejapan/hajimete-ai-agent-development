@@ -79,6 +79,14 @@ After your first task, continue with these three short chapters:
 
 They explain fundamentals that do not depend on a specific model or framework. No API key is required.
 
+### Practical guides
+
+4. [AI agent design patterns](./docs/en/04-design-patterns.md)
+5. [Common failures and improvements (Before / After)](./docs/en/05-failures-before-after.md)
+6. [`AGENTS.md` templates by project size](./docs/en/06-agents-by-project-size.md)
+7. [A team development workflow](./docs/en/07-team-workflow.md)
+8. [A catalog of prompts for AI agents](./docs/en/08-prompt-catalog.md)
+
 ## What is `AGENTS.md`?
 
 `AGENTS.md` tells an AI agent how work should be done in a repository. It can describe the project, commands, test procedures, and important restrictions.
