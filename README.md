@@ -8,6 +8,18 @@ AIに全部任せるためではなく、AIと安心して一緒に作るため�
 
 難しい設定や専門知識は必要ありません。まずは `AGENTS.md` を1枚置き、AIへの仕事の頼み方と、変更結果の確かめ方を覚えます。
 
+## まず5分で動かす
+
+APIキーも外部ライブラリも不要です。問い合わせを分類し、安全な返信案を作るミニエージェントを動かしてみましょう。
+
+```bash
+cd examples/five-minute-agent
+python3 agent.py
+python3 -m unittest -v
+```
+
+詳しい説明は [5分で動くAIエージェント](./examples/five-minute-agent/README.md) にあります。
+
 ![AIエージェント開発のデモ](./assets/agent-development-demo.gif)
 
 ## こんな人におすすめ

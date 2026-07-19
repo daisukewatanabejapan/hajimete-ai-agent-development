@@ -8,6 +8,18 @@ This small, practical guide is not about handing everything over to AI. It is ab
 
 You do not need advanced configuration or specialist knowledge. Start with one `AGENTS.md` file, learn how to describe a task, and check what the AI changed.
 
+## Run something in five minutes
+
+No API key or external package is required. Run a tiny agent that classifies a support request and creates a safe reply draft.
+
+```bash
+cd examples/five-minute-agent
+python3 agent.py
+python3 -m unittest -v
+```
+
+See [Five-Minute Agent](./examples/five-minute-agent/README.en.md) for the walkthrough.
+
 ![AI agent development demo](./assets/agent-development-demo.gif)
 
 ## Who this guide is for
