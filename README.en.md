@@ -88,8 +88,12 @@ Put durable project rules in this file instead of repeating them in every task. 
 Choose an example to get started:
 
 - [`AGENTS-minimal.md`](./examples/en/AGENTS-minimal.md): minimum version
+- [`AGENTS-java.md`](./examples/en/AGENTS-java.md): Java project
+- [`AGENTS-go.md`](./examples/en/AGENTS-go.md): Go project
+- [`AGENTS-rust.md`](./examples/en/AGENTS-rust.md): Rust project
+- [`AGENTS-javascript.md`](./examples/en/AGENTS-javascript.md): JavaScript project
 - [`AGENTS-python.md`](./examples/en/AGENTS-python.md): Python project
-- [`AGENTS-node.md`](./examples/en/AGENTS-node.md): Node.js project
+- [`AGENTS-node.md`](./examples/en/AGENTS-node.md): existing Node.js example
 
 See OpenAI's official [`AGENTS.md` guide](https://developers.openai.com/codex/guides/agents-md) for product details.
 
