@@ -90,8 +90,12 @@ AIへの依頼には、次の4項目があると伝わりやすくなります�
 用途別の例も用意しています。
 
 - [`AGENTS-minimal.md`](./examples/AGENTS-minimal.md)：最小構成
+- [`AGENTS-java.md`](./examples/AGENTS-java.md)：Java向け
+- [`AGENTS-go.md`](./examples/AGENTS-go.md)：Go向け
+- [`AGENTS-rust.md`](./examples/AGENTS-rust.md)：Rust向け
+- [`AGENTS-javascript.md`](./examples/AGENTS-javascript.md)：JavaScript向け
 - [`AGENTS-python.md`](./examples/AGENTS-python.md)：Python向け
-- [`AGENTS-node.md`](./examples/AGENTS-node.md)：Node.js向け
+- [`AGENTS-node.md`](./examples/AGENTS-node.md)：Node.js向け（既存例）
 
 詳しい仕様はOpenAI公式の [AGENTS.mdガイド](https://developers.openai.com/codex/guides/agents-md) を確認してください。
 
