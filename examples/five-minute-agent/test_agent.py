@@ -20,6 +20,14 @@ class AgentTests(unittest.TestCase):
         result = run_agent("Hello from a new customer")
         self.assertEqual(result["category"], "other")
 
+    def test_does_not_match_keyword_inside_another_word(self):
+        result = run_agent("Showcase update")
+        self.assertEqual(result["category"], "other")
+
+    def test_does_not_treat_chinese_as_japanese(self):
+        result = run_agent("系统错误")
+        self.assertTrue(result["reply_draft"].startswith("Thank you"))
+
     def test_always_requires_human_review(self):
         result = run_agent("The app crashes")
         self.assertIs(result["needs_human_review"], True)

@@ -12,6 +12,8 @@ You do not need advanced configuration or specialist knowledge. Start with one `
 
 No API key or external package is required. Run a tiny agent that classifies a support request and creates a safe reply draft.
 
+It is a deterministic local example for learning a safe control loop; it does not call a generative AI model.
+
 ```bash
 cd examples/five-minute-agent
 python3 agent.py
@@ -173,7 +175,7 @@ This guide begins with AI-assisted software development using tools such as Code
 
 ## Contributing
 
-Corrections, clearer explanations, and beginner-friendly examples are welcome. Please open an Issue or Pull Request.
+Corrections, clearer explanations, and beginner-friendly examples are welcome. See [`CONTRIBUTING.en.md`](./CONTRIBUTING.en.md) for the steps.
 
 ## License
 

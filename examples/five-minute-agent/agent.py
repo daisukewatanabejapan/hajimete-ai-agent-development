@@ -2,6 +2,7 @@
 
 import argparse
 import json
+import re
 from typing import Dict, List
 
 
@@ -53,11 +54,19 @@ def validate_input(text: str) -> str:
 def classify(text: str) -> str:
     """Classify a request into one of three bounded categories."""
     lowered = text.lower()
-    if any(word in lowered for word in BUG_WORDS):
+    if any(contains_keyword(lowered, word) for word in BUG_WORDS):
         return "bug"
-    if any(word in lowered for word in QUESTION_WORDS):
+    if any(contains_keyword(lowered, word) for word in QUESTION_WORDS):
         return "question"
     return "other"
+
+
+def contains_keyword(text: str, keyword: str) -> bool:
+    """Match English words at boundaries and Japanese phrases as written."""
+    if keyword.isascii() and any(char.isalpha() for char in keyword):
+        pattern = rf"(?<![a-z]){re.escape(keyword)}(?![a-z])"
+        return re.search(pattern, text) is not None
+    return keyword in text
 
 
 def summarize(text: str, limit: int = 80) -> str:
@@ -85,8 +94,9 @@ def draft_reply(category: str, language: str) -> str:
 
 
 def detect_language(text: str) -> str:
-    """Select Japanese when the input contains Japanese characters."""
-    return "ja" if any("\u3040" <= char <= "\u9fff" for char in text) else "en"
+    """Select Japanese when the input contains hiragana or katakana."""
+    japanese_ranges = (("\u3040", "\u30ff"), ("\u31f0", "\u31ff"), ("\uff66", "\uff9d"))
+    return "ja" if any(start <= char <= end for char in text for start, end in japanese_ranges) else "en"
 
 
 def validate_output(result: Dict[str, object]) -> None:
@@ -98,8 +108,16 @@ def validate_output(result: Dict[str, object]) -> None:
         raise ValueError("category is not allowed")
     if result["needs_human_review"] is not True:
         raise ValueError("human review must remain enabled")
+    if not isinstance(result["summary"], str) or not isinstance(result["reply_draft"], str):
+        raise ValueError("summary and reply_draft must be text")
     if not isinstance(result["trace"], list):
         raise ValueError("trace must be a list")
+    allowed_traces = [
+        ["input_validated", "request_classified", "reply_drafted"],
+        ["input_validated", "request_classified", "reply_drafted", "output_validated"],
+    ]
+    if result["trace"] not in allowed_traces:
+        raise ValueError("trace contains unexpected steps")
 
 
 def run_agent(text: str) -> Dict[str, object]:
@@ -122,6 +140,7 @@ def run_agent(text: str) -> Dict[str, object]:
 
     validate_output(result)
     trace.append("output_validated")
+    validate_output(result)
     return result
 
 
