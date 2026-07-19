@@ -8,6 +8,8 @@ AIに全部任せるためではなく、AIと安心して一緒に作るため�
 
 難しい設定や専門知識は必要ありません。まずは `AGENTS.md` を1枚置き、AIへの仕事の頼み方と、変更結果の確かめ方を覚えます。
 
+![AIエージェント開発のデモ](./assets/agent-development-demo.gif)
+
 ## こんな人におすすめ
 
 - AIコーディングエージェントを初めて使う
@@ -88,6 +90,13 @@ AIへの依頼には、次の4項目があると伝わりやすくなります�
 6. [プロジェクト規模ごとのAGENTS.mdテンプレート](./docs/06-agents-by-project-size.md)
 7. [チーム開発での運用例](./docs/07-team-workflow.md)
 8. [AIへの依頼文（プロンプト）のカタログ](./docs/08-prompt-catalog.md)
+
+### 見て確認する
+
+9. [AIエージェント全体像のアーキテクチャ図](./docs/09-architecture.md)
+10. [FAQ：初心者がつまずく点](./docs/10-faq.md)
+11. [AIエージェント開発チェックリスト](./docs/11-checklist.md)
+12. [OSS Showcase：実際のAGENTS.md事例](./docs/12-showcase.md)
 
 ## `AGENTS.md` とは
 

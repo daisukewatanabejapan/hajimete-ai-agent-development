@@ -8,6 +8,8 @@ This small, practical guide is not about handing everything over to AI. It is ab
 
 You do not need advanced configuration or specialist knowledge. Start with one `AGENTS.md` file, learn how to describe a task, and check what the AI changed.
 
+![AI agent development demo](./assets/agent-development-demo.gif)
+
 ## Who this guide is for
 
 - You are using an AI coding agent for the first time
@@ -86,6 +88,13 @@ They explain fundamentals that do not depend on a specific model or framework. N
 6. [`AGENTS.md` templates by project size](./docs/en/06-agents-by-project-size.md)
 7. [A team development workflow](./docs/en/07-team-workflow.md)
 8. [A catalog of prompts for AI agents](./docs/en/08-prompt-catalog.md)
+
+### See the whole picture
+
+9. [AI agent architecture at a glance](./docs/en/09-architecture.md)
+10. [FAQ: common beginner questions](./docs/en/10-faq.md)
+11. [AI agent development checklist](./docs/en/11-checklist.md)
+12. [OSS Showcase: real-world `AGENTS.md` examples](./docs/en/12-showcase.md)
 
 ## What is `AGENTS.md`?
 
