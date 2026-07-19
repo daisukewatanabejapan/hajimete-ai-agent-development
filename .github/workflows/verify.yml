@@ -1,0 +1,24 @@
+name: Verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+      - name: Run the five-minute agent tests
+        run: python3 -m unittest discover -s examples/five-minute-agent -v
+      - name: Check local Markdown links
+        run: python3 scripts/check_markdown_links.py

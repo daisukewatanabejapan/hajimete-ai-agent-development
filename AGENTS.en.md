@@ -16,11 +16,16 @@ This repository is a beginner-friendly guide to working with AI coding agents.
 
 ## Verification
 
-This repository currently has no automated program tests.
+Run the sample tests and local Markdown link check from the repository root:
+
+```bash
+python3 -m unittest discover -s examples/five-minute-agent -v
+python3 scripts/check_markdown_links.py
+```
 
 After a change, check that:
 
-1. Markdown headings and links are valid
+1. The automated tests and Markdown link check pass
 2. Examples can be copied as written
 3. The README and `AGENTS.md` do not contradict each other
 4. Product-specific explanations link to official information
