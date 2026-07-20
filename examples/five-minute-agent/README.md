@@ -9,7 +9,7 @@
 - Python 3.9以上
 - ターミナル
 
-APIキー、外部ライブラリ、ネットワーク接続は不要です。
+APIキー、外部ライブラリ、ネットワーク接続は不要です。すべてローカルで動作します。
 
 まずPython 3を確認します。
 
@@ -19,9 +19,13 @@ python3 --version
 
 `Python 3.9` 以上が表示されれば準備完了です。`python3: command not found` と表示された場合は、[Python公式サイト](https://www.python.org/downloads/)からPython 3をインストールしてください。
 
+Windowsで `python3` が見つからない場合は、以降のコマンドを `python` に読み替えてください。
+
 ## 2. リポジトリを取得する
 
 まだ取得していない場合は、次のコマンドを実行します。
+
+GitHubページ右上の緑色の「Code」ボタンを押し、「HTTPS」のURLをコピーします。`git clone` は、そのURLにあるファイル一式を自分のパソコンへコピーするコマンドです。
 
 ```bash
 git clone https://github.com/daisukewatanabejapan/hajimete-ai-agent-development.git
@@ -49,6 +53,8 @@ python3 agent.py --text "パスワードの変更方法を教えてください"
 ```bash
 python3 -m unittest -v
 ```
+
+Windowsでは `python -m unittest -v` を実行します。
 
 ## 出力例
 
