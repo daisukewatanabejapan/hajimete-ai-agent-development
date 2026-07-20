@@ -10,11 +10,13 @@ You do not need advanced configuration or specialist knowledge. Start with one `
 
 ## Run something in five minutes
 
-No API key or external package is required. Run a tiny agent that classifies a support request and creates a safe reply draft.
+No API key or external package is required. Everything runs locally. Run a tiny agent that classifies a support request and creates a safe reply draft.
 
 It is a deterministic local example for learning a safe control loop; it does not call a generative AI model.
 
 ### 1. Get the repository (1 minute)
+
+On this repository's GitHub page, select the green **Code** button in the upper-right corner and copy the **HTTPS** URL. `git clone` is the command that copies the files from that URL to your computer.
 
 ```bash
 git clone https://github.com/daisukewatanabejapan/hajimete-ai-agent-development.git
@@ -33,6 +35,13 @@ python3 agent.py
 
 You are ready if the command shows `Python 3.9` or later. If you see `python3: command not found`, install Python 3 from the [official Python website](https://www.python.org/downloads/).
 
+On Windows, if `python3` is not found, use `python` in the commands that follow:
+
+```powershell
+python --version
+python agent.py
+```
+
 A successful run prints a classification and reply draft like this:
 
 ```json
@@ -49,6 +58,8 @@ A successful run prints a classification and reply draft like this:
 ```bash
 python3 -m unittest -v
 ```
+
+On Windows, run `python -m unittest -v`.
 
 Seeing `OK` means the tests passed. **That completes the first five minutes. In the next five, add `AGENTS.md` to your own project.**
 
@@ -91,17 +102,17 @@ If your project has no tests yet, say so. Do not invent a command that does not 
 
 ### 5. Ask for one small task (2 minutes)
 
-For your first task, choose something you can easily review, such as fixing a typo or adding one test.
+For your first task, choose something tiny that you can easily review, such as changing one character in the README.
 
 ```text
 Goal:
-Fix the typo in the README.
+In the README heading, change `beginer` to `beginner`.
 
 Scope:
 Change README.md only.
 
 Done when:
-The typo is fixed and the meaning of the surrounding text is unchanged.
+Only the specified typo is fixed and no other text has changed.
 
 Do not:
 Change the structure or design.
@@ -222,3 +233,5 @@ Corrections, clearer explanations, and beginner-friendly examples are welcome. S
 ## License
 
 Released under the [MIT License](./LICENSE). You may copy and adapt these templates for your own projects.
+
+Once you reach this point, you have experienced the basic AI agent development workflow from start to finish.

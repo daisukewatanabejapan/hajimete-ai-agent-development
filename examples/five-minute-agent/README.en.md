@@ -9,7 +9,7 @@ This tiny sample classifies a support request, drafts a reply, and stops for hum
 - Python 3.9 or later
 - A terminal
 
-No API key, external package, or network connection is required.
+No API key, external package, or network connection is required. Everything runs locally.
 
 First, check Python 3:
 
@@ -19,9 +19,13 @@ python3 --version
 
 You are ready if the command shows `Python 3.9` or later. If you see `python3: command not found`, install Python 3 from the [official Python website](https://www.python.org/downloads/).
 
+On Windows, if `python3` is not found, use `python` in the commands that follow.
+
 ## 2. Get the repository
 
 If you have not downloaded it yet, run:
+
+On the GitHub page, select the green **Code** button in the upper-right corner and copy the **HTTPS** URL. `git clone` copies the files from that URL to your computer.
 
 ```bash
 git clone https://github.com/daisukewatanabejapan/hajimete-ai-agent-development.git
@@ -49,6 +53,8 @@ python3 agent.py --text "How do I change my password?"
 ```bash
 python3 -m unittest -v
 ```
+
+On Windows, run `python -m unittest -v`.
 
 ## Example output
 
