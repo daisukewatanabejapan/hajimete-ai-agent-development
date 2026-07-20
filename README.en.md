@@ -14,11 +14,43 @@ No API key or external package is required. Run a tiny agent that classifies a s
 
 It is a deterministic local example for learning a safe control loop; it does not call a generative AI model.
 
+### 1. Get the repository (1 minute)
+
 ```bash
+git clone https://github.com/daisukewatanabejapan/hajimete-ai-agent-development.git
+cd hajimete-ai-agent-development
+```
+
+If you see `git: command not found`, install Git from the [official Git website](https://git-scm.com/downloads).
+
+### 2. Check Python 3 and run the sample (2 minutes)
+
+```bash
+python3 --version
 cd examples/five-minute-agent
 python3 agent.py
+```
+
+You are ready if the command shows `Python 3.9` or later. If you see `python3: command not found`, install Python 3 from the [official Python website](https://www.python.org/downloads/).
+
+A successful run prints a classification and reply draft like this:
+
+```json
+{
+  "category": "bug",
+  "summary": "保存ボタンを押しても反応しません",
+  "reply_draft": "ご報告ありがとうございます。発生した環境と再現手順を教えてください。",
+  "needs_human_review": true
+}
+```
+
+### 3. Run the tests (2 minutes)
+
+```bash
 python3 -m unittest -v
 ```
+
+Seeing `OK` means the tests passed. **That completes the first five minutes. In the next five, add `AGENTS.md` to your own project.**
 
 See [Five-Minute Agent](./examples/five-minute-agent/README.en.md) for the walkthrough.
 
@@ -31,13 +63,23 @@ See [Five-Minute Agent](./examples/five-minute-agent/README.en.md) for the walkt
 - You do not know what to write in `AGENTS.md`
 - You want to use AI safely in a personal project or small team
 
-## Get started in 10 minutes
+## The 10-minute breakdown
 
-### 1. Copy `AGENTS.md`
+| Time | What you will do |
+| --- | --- |
+| 1 minute | Get the repository |
+| 2 minutes | Run the sample |
+| 2 minutes | Run the tests |
+| 3 minutes | Copy `AGENTS.md` and adapt three sections |
+| 2 minutes | Try and review your first small task |
+
+## The next five minutes: add `AGENTS.md`
+
+### 4. Copy `AGENTS.md` (3 minutes)
 
 Copy [`AGENTS.en.md`](./AGENTS.en.md) to the root of your repository and rename it to `AGENTS.md`.
 
-### 2. Change only three things
+#### Change only three things
 
 Adapt these sections to your project:
 
@@ -47,7 +89,7 @@ Adapt these sections to your project:
 
 If your project has no tests yet, say so. Do not invent a command that does not work.
 
-### 3. Ask for one small task
+### 5. Ask for one small task (2 minutes)
 
 For your first task, choose something you can easily review, such as fixing a typo or adding one test.
 
@@ -65,7 +107,7 @@ Do not:
 Change the structure or design.
 ```
 
-### 4. Review the result
+#### Review the result
 
 Do not rely only on the agent saying that it finished. Check:
 

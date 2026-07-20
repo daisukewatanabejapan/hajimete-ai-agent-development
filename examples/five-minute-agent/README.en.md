@@ -11,7 +11,24 @@ This tiny sample classifies a support request, drafts a reply, and stops for hum
 
 No API key, external package, or network connection is required.
 
-## 2. Run it
+First, check Python 3:
+
+```bash
+python3 --version
+```
+
+You are ready if the command shows `Python 3.9` or later. If you see `python3: command not found`, install Python 3 from the [official Python website](https://www.python.org/downloads/).
+
+## 2. Get the repository
+
+If you have not downloaded it yet, run:
+
+```bash
+git clone https://github.com/daisukewatanabejapan/hajimete-ai-agent-development.git
+cd hajimete-ai-agent-development
+```
+
+## 3. Run it
 
 From the repository root:
 
@@ -27,7 +44,7 @@ python3 agent.py --text "Nothing happens when I click Save"
 python3 agent.py --text "How do I change my password?"
 ```
 
-## 3. Test it
+## 4. Test it
 
 ```bash
 python3 -m unittest -v

@@ -11,7 +11,24 @@
 
 APIキー、外部ライブラリ、ネットワーク接続は不要です。
 
-## 2. 動かす
+まずPython 3を確認します。
+
+```bash
+python3 --version
+```
+
+`Python 3.9` 以上が表示されれば準備完了です。`python3: command not found` と表示された場合は、[Python公式サイト](https://www.python.org/downloads/)からPython 3をインストールしてください。
+
+## 2. リポジトリを取得する
+
+まだ取得していない場合は、次のコマンドを実行します。
+
+```bash
+git clone https://github.com/daisukewatanabejapan/hajimete-ai-agent-development.git
+cd hajimete-ai-agent-development
+```
+
+## 3. 動かす
 
 リポジトリのルートから実行します。
 
@@ -27,7 +44,7 @@ python3 agent.py --text "保存ボタンを押しても反応しません"
 python3 agent.py --text "パスワードの変更方法を教えてください"
 ```
 
-## 3. テストする
+## 4. テストする
 
 ```bash
 python3 -m unittest -v

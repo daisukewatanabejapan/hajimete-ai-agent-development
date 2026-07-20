@@ -14,11 +14,43 @@ APIキーも外部ライブラリも不要です。問い合わせを分類し�
 
 これは生成AIモデルを使わず、安全な制御ループを学ぶための決定的なローカル版です。
 
+### 1. リポジトリを取得する（1分）
+
 ```bash
+git clone https://github.com/daisukewatanabejapan/hajimete-ai-agent-development.git
+cd hajimete-ai-agent-development
+```
+
+`git: command not found` と表示された場合は、[Git公式サイト](https://git-scm.com/downloads)からGitをインストールしてください。
+
+### 2. Python 3を確認して実行する（2分）
+
+```bash
+python3 --version
 cd examples/five-minute-agent
 python3 agent.py
+```
+
+`Python 3.9` 以上が表示されれば準備完了です。`python3: command not found` と表示された場合は、[Python公式サイト](https://www.python.org/downloads/)からPython 3をインストールしてください。
+
+成功すると、次のような分類結果と返信案が表示されます。
+
+```json
+{
+  "category": "bug",
+  "summary": "保存ボタンを押しても反応しません",
+  "reply_draft": "ご報告ありがとうございます。発生した環境と再現手順を教えてください。",
+  "needs_human_review": true
+}
+```
+
+### 3. テストする（2分）
+
+```bash
 python3 -m unittest -v
 ```
+
+`OK` と表示されれば成功です。**ここまでで5分です。ここからさらに5分で、自分のプロジェクトに `AGENTS.md` を追加します。**
 
 詳しい説明は [5分で動くAIエージェント](./examples/five-minute-agent/README.md) にあります。
 
@@ -31,13 +63,23 @@ python3 -m unittest -v
 - `AGENTS.md` に何を書けばよいか分からない
 - 個人開発や小さなチームでAIを安全に活用したい
 
-## 10分ではじめる
+## 10分の内訳
 
-### 1. `AGENTS.md` をコピーする
+| 時間 | やること |
+| --- | --- |
+| 1分 | リポジトリを取得する |
+| 2分 | サンプルを実行する |
+| 2分 | テストを実行する |
+| 3分 | `AGENTS.md` をコピーして3か所直す |
+| 2分 | 最初の小さな依頼を試して確認する |
+
+## ここからさらに5分：`AGENTS.md`を追加する
+
+### 4. `AGENTS.md` をコピーする（3分）
 
 このリポジトリの [`AGENTS.md`](./AGENTS.md) を、自分のリポジトリの一番上にコピーします。
 
-### 2. 3か所だけ書き換える
+#### 3か所だけ書き換える
 
 コピーしたファイルの次の項目を、自分のプロジェクトに合わせます。
 
@@ -47,7 +89,7 @@ python3 -m unittest -v
 
 まだテストがない場合は、無理にコマンドを作らず「テストはまだありません」と書いて構いません。
 
-### 3. 小さな仕事を頼む
+### 5. 小さな仕事を頼む（2分）
 
 最初は、READMEの誤字修正やテストの追加など、結果を自分で確認できる仕事がおすすめです。
 
@@ -65,7 +107,7 @@ README.mdだけを変更してください。
 構成やデザインは変更しないでください。
 ```
 
-### 4. 結果を確認する
+#### 結果を確認する
 
 AIの「完了しました」だけで判断せず、最低限次を確認します。
 
