@@ -34,6 +34,15 @@ It is a deterministic local example for learning a safe control loop; it does no
 
 On this repository's GitHub page, select the green **Code** button in the upper-right corner and copy the **HTTPS** URL. `git clone` is the command that copies the files from that URL to your computer.
 
+```mermaid
+flowchart LR
+    A["GitHub Code button"] --> B["Copy the HTTPS URL"]
+    B --> C["Run git clone"]
+    C --> D["Files are on your computer"]
+```
+
+**Why?** This gives you a local copy that you can run, explore, and change safely.
+
 ```bash
 git clone https://github.com/daisukewatanabejapan/hajimete-ai-agent-development.git
 cd hajimete-ai-agent-development
@@ -42,6 +51,8 @@ cd hajimete-ai-agent-development
 If you see `git: command not found`, install Git from the [official Git website](https://git-scm.com/downloads).
 
 ### 2. Check Python 3 and run the sample (2 minutes)
+
+**Why?** Checking Python first confirms that your computer can run the local sample program.
 
 ```bash
 python3 --version
@@ -69,7 +80,16 @@ A successful run prints a classification and reply draft like this:
 }
 ```
 
+```mermaid
+flowchart LR
+    A["Enter a support request"] --> B["Classify it"]
+    B --> C["Draft a reply"]
+    C --> D["A person reviews it"]
+```
+
 ### 3. Run the tests (2 minutes)
+
+**Why?** Tests automatically confirm that the sample still behaves as described and has not been broken by a change.
 
 ```bash
 python3 -m unittest -v
@@ -94,6 +114,8 @@ See [Five-Minute Agent](./examples/five-minute-agent/README.en.md) for the walkt
 
 Copy [`AGENTS.en.md`](./AGENTS.en.md) to the root of your repository and rename it to `AGENTS.md`.
 
+**Why?** This lets the AI reuse your project rules and verification steps without you repeating them in every request.
+
 #### Change only three things
 
 Adapt these sections to your project:
@@ -107,6 +129,8 @@ If your project has no tests yet, say so. Do not invent a command that does not 
 ### 5. Ask for one small task (2 minutes)
 
 For your first task, choose something tiny that you can easily review, such as changing one character in the README.
+
+**Why?** A small change is easier to verify yourself and easier to correct if something goes wrong.
 
 ```text
 Goal:

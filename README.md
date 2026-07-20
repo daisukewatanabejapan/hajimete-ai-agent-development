@@ -34,6 +34,15 @@ APIキーも外部ライブラリも不要です。すべてローカルで動�
 
 このリポジトリのGitHubページ右上にある緑色の「Code」ボタンを押し、「HTTPS」のURLをコピーします。`git clone` は、そのURLにあるファイル一式を自分のパソコンへコピーするコマンドです。
 
+```mermaid
+flowchart LR
+    A["GitHubの Code"] --> B["HTTPS URLをコピー"]
+    B --> C["git cloneを実行"]
+    C --> D["自分のPCにコピー完了"]
+```
+
+**なぜ？** サンプルを自分のパソコンで実行し、自由に試せる状態にするためです。
+
 ```bash
 git clone https://github.com/daisukewatanabejapan/hajimete-ai-agent-development.git
 cd hajimete-ai-agent-development
@@ -42,6 +51,8 @@ cd hajimete-ai-agent-development
 `git: command not found` と表示された場合は、[Git公式サイト](https://git-scm.com/downloads)からGitをインストールしてください。
 
 ### 2. Python 3を確認して実行する（2分）
+
+**なぜ？** Python 3が使えることを確認してから、ローカルのサンプルプログラムを動かすためです。
 
 ```bash
 python3 --version
@@ -69,7 +80,16 @@ python agent.py
 }
 ```
 
+```mermaid
+flowchart LR
+    A["問い合わせを入力"] --> B["内容を分類"]
+    B --> C["返信案を作成"]
+    C --> D["人が確認"]
+```
+
 ### 3. テストする（2分）
+
+**なぜ？** サンプルが説明どおりに動き、変更によって壊れていないことを自動で確かめるためです。
 
 ```bash
 python3 -m unittest -v
@@ -94,6 +114,8 @@ Windowsでは `python -m unittest -v` を実行します。
 
 このリポジトリの [`AGENTS.md`](./AGENTS.md) を、自分のリポジトリの一番上にコピーします。
 
+**なぜ？** AIに毎回同じ説明をしなくても、プロジェクトのルールと確認方法を伝えられるようにするためです。
+
 #### 3か所だけ書き換える
 
 コピーしたファイルの次の項目を、自分のプロジェクトに合わせます。
@@ -107,6 +129,8 @@ Windowsでは `python -m unittest -v` を実行します。
 ### 5. 小さな仕事を頼む（2分）
 
 最初は、READMEの1文字だけを直すなど、結果を自分で確認できる小さな仕事がおすすめです。
+
+**なぜ？** 変更が小さければ、意図どおりかを自分で確認しやすく、失敗しても直しやすいためです。
 
 ```text
 目的：
