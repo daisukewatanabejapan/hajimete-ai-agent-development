@@ -6,7 +6,21 @@
 
 This small, practical guide is not about handing everything over to AI. It is about learning how to build software with AI safely and confidently.
 
-You do not need advanced configuration or specialist knowledge. Start with one `AGENTS.md` file, learn how to describe a task, and check what the AI changed.
+**In 10 minutes, you will run a small AI agent that classifies support requests and drafts replies while learning the basic development workflow.**
+
+This guide uses an **AI coding agent**, such as Codex, to help you build a small **AI agent**. You do not need advanced configuration or specialist knowledge.
+
+![AI agent development demo](./assets/agent-development-demo.gif)
+
+## The 10-minute journey
+
+| Time | What you will do |
+| --- | --- |
+| 1 minute | Get the repository |
+| 2 minutes | Run the sample |
+| 2 minutes | Run the tests |
+| 3 minutes | Copy `AGENTS.md` and adapt three sections |
+| 2 minutes | Try and review your first small task |
 
 ## Run something in five minutes
 
@@ -65,24 +79,12 @@ Seeing `OK` means the tests passed. **That completes the first five minutes. In 
 
 See [Five-Minute Agent](./examples/five-minute-agent/README.en.md) for the walkthrough.
 
-![AI agent development demo](./assets/agent-development-demo.gif)
-
 ## Who this guide is for
 
 - You are using an AI coding agent for the first time
 - An AI changed more code than you expected
 - You do not know what to write in `AGENTS.md`
 - You want to use AI safely in a personal project or small team
-
-## The 10-minute breakdown
-
-| Time | What you will do |
-| --- | --- |
-| 1 minute | Get the repository |
-| 2 minutes | Run the sample |
-| 2 minutes | Run the tests |
-| 3 minutes | Copy `AGENTS.md` and adapt three sections |
-| 2 minutes | Try and review your first small task |
 
 ## The next five minutes: add `AGENTS.md`
 
@@ -225,6 +227,12 @@ Research, implementation, refactoring, and documentation are easier to review wh
 ## Scope of this guide
 
 This guide begins with AI-assisted software development using tools such as Codex, then introduces the fundamentals of designing a small AI agent. It does not teach you how to train an AI model.
+
+## Open source and ready for contributions
+
+- Free to use and adapt under the [MIT License](./LICENSE)
+- Questions and improvement ideas are welcome in [Issues](https://github.com/daisukewatanabejapan/hajimete-ai-agent-development/issues)
+- Fixes and new examples are welcome through [Pull Requests](https://github.com/daisukewatanabejapan/hajimete-ai-agent-development/pulls)
 
 ## Contributing
 
