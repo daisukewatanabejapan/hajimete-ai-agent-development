@@ -10,6 +10,13 @@ This small, practical guide is not about handing everything over to AI. It is ab
 
 This guide uses an **AI coding agent**, such as Codex, to help you build a small **AI agent**. You do not need advanced configuration or specialist knowledge.
 
+## This guide is for you if
+
+- You are using an AI coding agent for the first time
+- You want to try `AGENTS.md` in a real project
+- You want to learn how to develop software safely with AI
+- You need material for internal training or a study group
+
 ![AI agent development demo](./assets/agent-development-demo.gif)
 
 ## The 10-minute journey
@@ -100,13 +107,6 @@ On Windows, run `python -m unittest -v`.
 Seeing `OK` means the tests passed. **That completes the first five minutes. In the next five, add `AGENTS.md` to your own project.**
 
 See [Five-Minute Agent](./examples/five-minute-agent/README.en.md) for the walkthrough.
-
-## Who this guide is for
-
-- You are using an AI coding agent for the first time
-- An AI changed more code than you expected
-- You do not know what to write in `AGENTS.md`
-- You want to use AI safely in a personal project or small team
 
 ## The next five minutes: add `AGENTS.md`
 
