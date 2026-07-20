@@ -22,6 +22,8 @@ This guide uses an **AI coding agent**, such as Codex, to help you build a small
 | 3 minutes | Copy `AGENTS.md` and adapt three sections |
 | 2 minutes | Try and review your first small task |
 
+> **Time estimate:** The 10-minute journey assumes that Git and Python 3 are already installed. Allow several additional minutes—and sometimes 10 minutes or more—if you need to install them first.
+
 ## Run something in five minutes
 
 No API key or external package is required. Everything runs locally. Run a tiny agent that classifies a support request and creates a safe reply draft.
